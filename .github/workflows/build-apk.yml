@@ -43,14 +43,11 @@ jobs:
             echo "WARNING: Using placeholder model. Replace with real .tflite before use."
           fi
 
-      - name: Make gradlew executable
-        run: chmod +x gradlew || true
+      - name: Generate Gradle wrapper
+        run: gradle wrapper --gradle-version 8.2 --distribution-type bin
 
-      - name: Download Gradle wrapper (if missing)
-        run: |
-          if [ ! -f gradlew ]; then
-            gradle wrapper --gradle-version 8.2
-          fi
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon
