@@ -58,7 +58,7 @@ class ImageClassifier(
         if (useGpu) {
             val compatList = CompatibilityList()
             if (compatList.isDelegateSupportedOnThisDevice) {
-                gpuDelegate = GpuDelegate(compatList.bestOptionsForThisDevice)
+                gpuDelegate = GpuDelegate()
                 options.addDelegate(gpuDelegate!!)
                 Log.i(TAG, "GPU delegate enabled")
             } else {
