@@ -32,8 +32,11 @@ class ImageClassifier(
         const val MODEL_FILENAME = "mobilenetv3_classifier.tflite"
         const val LABELS_FILENAME = "labels.txt"
         const val IMAGE_SIZE = 224
-        private const val INPUT_MEAN = 0f
-        private const val INPUT_STD = 1f
+
+        // ImageNet normalization (mean/std scaled to 0-255 pixel range): (pixel/255 - mean) / std
+        private val INPUT_MEAN = floatArrayOf(123.675f, 116.28f, 103.53f)
+        private val INPUT_STD = floatArrayOf(58.395f, 57.12f, 57.375f)
+    }
     }
 
     data class Recognition(val label: String, val confidence: Float, val index: Int) {
