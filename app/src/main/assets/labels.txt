@@ -1,7 +1,7 @@
-bowl
 chopstick
-cup
 fork
-plate
 spoon
+plate
+bowl
 tray
+cup
