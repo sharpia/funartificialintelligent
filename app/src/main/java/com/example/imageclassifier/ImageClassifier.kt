@@ -37,7 +37,6 @@ class ImageClassifier(
         private val INPUT_MEAN = floatArrayOf(123.675f, 116.28f, 103.53f)
         private val INPUT_STD = floatArrayOf(58.395f, 57.12f, 57.375f)
     }
-    }
 
     data class Recognition(val label: String, val confidence: Float, val index: Int) {
         val confidencePercent: String get() = "%.1f%%".format(confidence * 100)
