@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Image Classifier</string>
-    <string name="camera_permission_denied">Camera permission is required to use this app</string>
-    <string name="model_load_error">Failed to load model. Please add mobilenetv3_classifier.tflite and labels.txt to assets/</string>
-    <string name="inference_time_ms">Inference: %d ms</string>
-    <string name="loading_model">Loading model…</string>
-    <string name="ready">Ready</string>
-</resources>
